@@ -6,7 +6,7 @@ import (
 )
 
 // osFileModeToUmaskSymbol converts os.FileMode to umask symbolic output
-func osFileModeToUmaskSymbol(perm os.FileMode) string {
+func osFileModeToUmaskSymbolMode(perm os.FileMode) string {
 	permS := perm.String()
 	mask := ""
 	umask := ""

@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestOSFileModeToUmaskSymbol(t *testing.T) {
+func TestOSFileModeToUmaskSymbolMode(t *testing.T) {
 	tests := []struct {
 		perm   os.FileMode
 		expect string
@@ -26,7 +26,7 @@ func TestOSFileModeToUmaskSymbol(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.perm.String(), func(t *testing.T) {
-			got := osFileModeToUmaskSymbol(tt.perm)
+			got := osFileModeToUmaskSymbolMode(tt.perm)
 			if got != tt.expect {
 				t.Errorf("expected %s, got %s", tt.expect, got)
 			}
