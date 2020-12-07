@@ -1,6 +1,5 @@
-verify:
-	go mod tidy
-	go mod verify
+test:
+	cargo test
 
-test: verify
-	go test -count=1 ./...
+build: test
+	cargo build
